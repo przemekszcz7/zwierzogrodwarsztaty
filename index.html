@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Zwierzogród — Warsztaty dla Dzieci | Mobilne warsztaty przyrodnicze Poddębice</title>
+  <meta name="description" content="Mobilne warsztaty edukacyjne z żywymi zwierzętami egzotycznymi dla szkół i przedszkoli. Dojeżdżamy z Poddębic do Twojej placówki. Poznaj patyczaki, straszyki, liśćce, agamę i ślimaka afrykańskiego.">
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/RTDkhgw5/811830935-122113725333332839-2852031223488428120-n.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Czcionki Nunito (nagłówki) i Plus Jakarta Sans (treść) z pełnym wsparciem polskich znaków diakrytycznych (latin-ext) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&subset=latin,latin-ext&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-teal: #0d9488;
+      --primary-teal-dark: #0f766e;
+      --primary-teal-deep: #042f2e;
+      --primary-teal-light: #14b8a6;
+      --primary-teal-pale: #f0fdfa;
+      --primary-teal-border: #99f6e4;
+      --accent-amber: #d97706;
+      --accent-amber-bright: #f59e0b;
+      --accent-amber-pale: #fffbeb;
+      --accent-amber-border: #fde68a;
+      --text-dark: #0f172a;
+      --text-muted: #334155;
+      --text-soft: #64748b;
+      --bg-white: #ffffff;
+      --bg-slate: #f8fafc;
+      --shadow-sm: 0 2px 5px rgba(15, 118, 110, 0.08);
+      --shadow-md: 0 8px 20px rgba(15, 118, 110, 0.12);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 22px;
+      --radius-full: 9999px;
+      --font-display: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--bg-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      max-width: 100vw;
+      width: 100%;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4, .brand-font {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--primary-teal-deep);
+      letter-spacing: -0.015em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* PRZYCISKI */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 26px;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      border: 2px solid transparent;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      box-shadow: var(--shadow-sm);
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-teal);
+      color: var(--bg-white);
+    }
+    .btn-primary:hover {
+      background-color: var(--primary-teal-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--bg-white);
+    }
+
+    .btn-accent {
+      background-color: var(--accent-amber-bright);
+      color: #78350f;
+    }
+    .btn-accent:hover {
+      background-color: var(--accent-amber);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline {
+      background-color: var(--bg-white);
+      color: var(--primary-teal-dark);
+      border-color: var(--primary-teal);
+    }
+    .btn-outline:hover {
+      background-color: var(--primary-teal-pale);
+      transform: translateY(-2px);
+    }
+
+    /* NAWIGACJA */
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(255, 255, 255, 0.98);
+      border-bottom: 1px solid rgba(13, 148, 136, 0.15);
+    }
+
+    .mobile-menu-call-item {
+      display: none;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      position: relative;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--primary-teal);
+      flex-shrink: 0;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--primary-teal-deep);
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent-amber);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 26px;
+    }
+
+    .nav-menu a {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      padding: 6px 0;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary-teal);
+    }
+
+    .nav-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      background-color: var(--primary-teal);
+      color: var(--bg-white);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-cta-btn:hover {
+      background-color: var(--primary-teal-dark);
+      color: var(--bg-white);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      padding: 8px;
+      cursor: pointer;
+      color: var(--primary-teal-deep);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ROZDZIELACZ */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 0;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(13, 148, 136, 0.3), transparent);
+    }
+
+    .divider-icon {
+      width: 40px;
+      height: 40px;
+      margin: 0 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--primary-teal-pale);
+      border: 1px solid var(--primary-teal-border);
+      border-radius: 50%;
+      color: var(--primary-teal);
+      flex-shrink: 0;
+    }
+
+    /* HERO */
+    .hero-section {
+      background: radial-gradient(circle at 85% 15%, rgba(204, 251, 241, 0.5) 0%, rgba(255, 255, 255, 1) 60%),
+                  radial-gradient(circle at 10% 85%, rgba(254, 243, 199, 0.4) 0%, rgba(255, 255, 255, 1) 50%);
+      padding: 56px 0 68px 0;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge-wrap {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      background-color: var(--accent-amber-pale);
+      border: 1px solid var(--accent-amber-border);
+      border-radius: var(--radius-full);
+      margin-bottom: 18px;
+    }
+
+    .hero-badge-icon {
+      color: var(--accent-amber);
+    }
+
+    .hero-badge-text {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #92400e;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1.15;
+      color: var(--primary-teal-deep);
+      margin-bottom: 18px;
+    }
+
+    .hero-title .highlight-teal {
+      color: var(--primary-teal);
+    }
+
+    .hero-lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .hero-location-card {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      background-color: var(--primary-teal-pale);
+      border: 1px solid var(--primary-teal-border);
+      border-radius: var(--radius-md);
+      margin-bottom: 26px;
+    }
+
+    .hero-location-icon {
+      color: var(--primary-teal);
+      flex-shrink: 0;
+    }
+
+    .hero-location-text {
+      font-size: 0.95rem;
+      color: var(--primary-teal-deep);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .hero-visual-card {
+      background: var(--bg-white);
+      border: 2px solid var(--primary-teal-border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .hero-visual-badge {
+      position: absolute;
+      top: -14px;
+      right: 20px;
+      background: var(--accent-amber-bright);
+      color: #78350f;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-creatures-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      padding: 16px 8px;
+      background: var(--primary-teal-pale);
+      border-radius: var(--radius-md);
+      margin: 16px 0 20px 0;
+      border: 1px dashed var(--primary-teal);
+      text-align: center;
+    }
+
+    .hero-creature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-creature-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-teal);
+      border: 1px solid var(--primary-teal-border);
+      transition: transform 0.2s ease;
+    }
+
+    .hero-creature-item:hover .hero-creature-circle {
+      transform: scale(1.1);
+      color: var(--accent-amber);
+    }
+
+    .hero-creature-name {
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--primary-teal-deep);
+    }
+
+    .hero-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.94rem;
+      color: var(--text-dark);
+    }
+
+    .hero-feature-check {
+      color: var(--primary-teal);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* SEKCJA ZWIERZĘTA */
+    .section-animals {
+      padding: 72px 0;
+      background-color: var(--bg-white);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 46px auto;
+    }
+
+    .section-eyebrow {
+      display: inline-block;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--accent-amber);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--primary-teal-deep);
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .animals-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .animal-card {
+      background-color: var(--bg-white);
+      border: 1.5px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .animal-card:hover {
+      border-color: var(--primary-teal);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .animal-icon-container {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: var(--primary-teal-pale);
+      border: 1.5px solid var(--primary-teal-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-teal-dark);
+      margin-bottom: 18px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .animal-card:hover .animal-icon-container {
+      background: var(--accent-amber-pale);
+      border-color: var(--accent-amber-border);
+      color: var(--accent-amber);
+      transform: scale(1.05);
+    }
+
+    .animal-tag {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-amber);
+      margin-bottom: 4px;
+    }
+
+    .animal-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary-teal-deep);
+      margin-bottom: 10px;
+    }
+
+    .animal-desc {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.58;
+      flex-grow: 1;
+    }
+
+    .animal-highlight-box {
+      margin-top: 16px;
+      padding: 9px 12px;
+      background-color: var(--primary-teal-pale);
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--primary-teal-dark);
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .animal-highlight-box svg {
+      flex-shrink: 0;
+    }
+
+    .animals-grid .animal-card:nth-child(4) {
+      grid-column: span 1;
+    }
+    .animals-grid .animal-card:nth-child(5) {
+      grid-column: span 2;
+    }
+
+    /* SEKCJA PRZEBIEG SPOTKANIA */
+    .section-program {
+      padding: 72px 0;
+      background-color: var(--primary-teal-pale);
+    }
+
+    .program-core-card {
+      background: var(--bg-white);
+      border: 2px solid var(--primary-teal-border);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .program-quote-icon-wrap {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: var(--accent-amber-pale);
+      border: 2px solid var(--accent-amber-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-amber);
+      flex-shrink: 0;
+    }
+
+    .program-core-paragraph {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.55;
+      color: var(--primary-teal-deep);
+    }
+
+    .program-pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .program-pillar-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(13, 148, 136, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .program-pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-teal);
+    }
+
+    .pillar-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--primary-teal-pale);
+      color: var(--primary-teal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .pillar-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-teal-deep);
+      margin-bottom: 8px;
+    }
+
+    .pillar-text {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* SEKCJA CENNIK */
+    .section-pricing {
+      padding: 72px 0;
+      background-color: var(--bg-white);
+    }
+
+    .pricing-card-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      background: linear-gradient(145deg, #ffffff 0%, #f0fdfa 100%);
+      border: 3px solid var(--primary-teal);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .pricing-ribbon {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--accent-amber-bright);
+      color: #78350f;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 5px 22px;
+      border-radius: var(--radius-full);
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+      max-width: 90%;
+    }
+
+    .pricing-main-block {
+      text-align: center;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--primary-teal-border);
+      margin-bottom: 26px;
+    }
+
+    .pricing-headline {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--primary-teal-dark);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .pricing-amount-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .pricing-amount-number {
+      font-family: var(--font-display);
+      font-size: 4.2rem;
+      font-weight: 900;
+      color: var(--primary-teal-deep);
+      line-height: 1;
+    }
+
+    .pricing-amount-currency {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-amber);
+    }
+
+    .pricing-amount-period {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    .pricing-callout-text {
+      font-size: 1.1rem;
+      color: var(--text-dark);
+      font-weight: 700;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .pricing-includes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .pricing-include-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .pricing-include-icon {
+      color: var(--primary-teal);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .pricing-action-footer {
+      text-align: center;
+    }
+
+    /* SEKCJA KONTAKT I REZERWACJA */
+    .section-contact {
+      padding: 72px 0;
+      background-color: var(--primary-teal-pale);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: stretch;
+    }
+
+    .contact-info-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 2px solid var(--primary-teal-border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-item-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px;
+      background-color: var(--primary-teal-pale);
+      border: 1px solid var(--primary-teal-border);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .contact-item-link:hover {
+      background-color: var(--bg-white);
+      border-color: var(--primary-teal);
+      transform: translateX(4px);
+    }
+
+    .contact-icon-bubble {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary-teal);
+      color: var(--bg-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-label {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-amber);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-item-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary-teal-deep);
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-faq-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid rgba(13, 148, 136, 0.2);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .faq-block-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary-teal-dark);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-block-title svg {
+      color: var(--primary-teal);
+      flex-shrink: 0;
+    }
+
+    .faq-block-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* STOPKA */
+    .site-footer {
+      background-color: var(--primary-teal-deep);
+      color: #e2e8f0;
+      padding: 50px 0 30px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 34px;
+      padding-bottom: 34px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-brand-title {
+      font-size: 1.45rem;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.58;
+      max-width: 360px;
+      margin-bottom: 16px;
+    }
+
+    .footer-heading {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .footer-links-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links-list a {
+      color: #cbd5e1;
+      font-size: 0.94rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent-amber-bright);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.86rem;
+      color: #94a3b8;
+    }
+
+    /* PŁYNNE ANIMACJE (BEZ ZACINANIA NA MOBILE) */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      contain: layout style;
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* REDUCED MOTION */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+
+    /* RESPONSYWNOŚĆ MOBILNA I TABLETOWA */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .hero-title {
+        font-size: 2.6rem;
+      }
+      .animals-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .animals-grid .animal-card:nth-child(5) {
+        grid-column: span 2;
+      }
+      .program-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+      }
+      .nav-cta-desktop {
+        display: none !important;
+      }
+      .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-menu.mobile-open {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 76px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 20px 20px 28px 20px;
+        border-bottom: 3px solid var(--primary-teal);
+        box-shadow: 0 16px 36px rgba(15, 118, 110, 0.2);
+        gap: 14px;
+        z-index: 1000;
+        animation: slideDownMenu 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .nav-menu.mobile-open li {
+        width: 100%;
+        border-bottom: 1px solid #f1f5f9;
+        padding-bottom: 10px;
+      }
+      .nav-menu.mobile-open a {
+        display: block;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--primary-teal-deep);
+        padding: 4px 0;
+      }
+      .nav-menu.mobile-open a:active {
+        color: var(--primary-teal);
+      }
+      .nav-menu.mobile-open .mobile-menu-call-item {
+        display: block !important;
+        border-bottom: none;
+        padding-top: 6px;
+        padding-bottom: 0;
+      }
+      @keyframes slideDownMenu {
+        from {
+          opacity: 0;
+          transform: translateY(-8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hero-section {
+        padding: 40px 0 54px 0;
+      }
+      .hero-title {
+        font-size: 2.15rem;
+      }
+      .section-title {
+        font-size: 1.95rem;
+      }
+      .program-core-card {
+        grid-template-columns: 1fr;
+        padding: 24px;
+        gap: 16px;
+      }
+      .program-pillars-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-includes-grid {
+        grid-template-columns: 1fr;
+      }
+      .pricing-card-wrapper {
+        padding: 28px 18px;
+      }
+      .pricing-amount-number {
+        font-size: 3.5rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .animals-grid {
+        grid-template-columns: 1fr;
+      }
+      .animals-grid .animal-card:nth-child(5) {
+        grid-column: span 1;
+      }
+      .hero-creatures-row {
+        gap: 4px;
+      }
+      .hero-creature-circle {
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      .hero-lead {
+        font-size: 1rem;
+      }
+      .btn {
+        width: 100%;
+      }
+      .hero-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .contact-item-value {
+        font-size: 1.05rem;
+      }
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAWIGACJA GŁÓWNA -->
+  <header class="header-nav" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Główne menu nawigacyjne">
+        <a href="#" class="brand-link" aria-label="Zwierzogród — Strona główna">
+          <img src="https://i.ibb.co/RTDkhgw5/811830935-122113725333332839-2852031223488428120-n.jpg" alt="Logo Zwierzogród — Warsztaty dla Dzieci" class="brand-logo" width="44" height="44" loading="eager" decoding="async">
+          <div class="brand-text-wrap">
+            <span class="brand-title">Zwierzogród</span>
+            <span class="brand-subtitle">Warsztaty dla Dzieci</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#zwierzeta">Nasze zwierzęta</a></li>
+          <li><a href="#przebieg">O warsztatach</a></li>
+          <li><a href="#cennik">Cennik</a></li>
+          <li><a href="#kontakt">Kontakt i rezerwacja</a></li>
+          <li class="mobile-menu-call-item">
+            <a href="tel:693217524" class="btn btn-primary" style="width: 100%; text-decoration: none;" aria-label="Zadzwoń pod numer 693 217 524">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Zadzwoń: 693 217 524</span>
+            </a>
+          </li>
+        </ul>
+
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <!-- Lucide Phone Call Icon (Desktop) -->
+          <a href="tel:693217524" class="nav-cta-btn nav-cta-desktop" aria-label="Zadzwoń do nas pod numer 693 217 524">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>693 217 524</span>
+          </a>
+
+          <!-- Lucide Menu Icon -->
+          <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Otwórz menu mobilne" aria-expanded="false" aria-controls="navMenu">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SEKCJA HERO -->
+    <section class="hero-section" aria-labelledby="heroHeadline">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="hero-badge-wrap">
+              <!-- Lucide Sparkles Icon -->
+              <svg class="hero-badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              </svg>
+              <span class="hero-badge-text">Żywa lekcja przyrody w szkołach i przedszkolach</span>
+            </div>
+
+            <h1 id="heroHeadline" class="hero-title">
+              Zajęcia edukacyjne w&nbsp;<span class="highlight-teal">Waszej placówce!</span>
+            </h1>
+
+            <p class="hero-lead">
+              Zwierzogród to mobilne warsztaty edukacyjne z żywymi zwierzętami egzotycznymi. Zamiast organizować skomplikowane i kosztowne wyjazdy, zaproście fascynujący świat przyrody bezpośrednio do swojej szkoły lub przedszkola.
+            </p>
+
+            <div class="hero-location-card">
+              <!-- Lucide MapPin Icon -->
+              <div class="hero-location-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="hero-location-text">
+                Baza warsztatów: <strong>Poddębice</strong> — dojeżdżamy bezpośrednio do szkół i przedszkoli w całym regionie.
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <!-- Lucide Phone Icon -->
+              <a href="tel:693217524" class="btn btn-primary" aria-label="Zadzwoń i umów termin: 693 217 524">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Zadzwoń: 693 217 524</span>
+              </a>
+
+              <!-- Lucide Mail Icon -->
+              <a href="mailto:magdalenamonika67@gmail.com" class="btn btn-outline" aria-label="Napisz e-mail na magdalenamonika67@gmail.com">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>Napisz wiadomość</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- KARTA HERO -->
+          <div class="reveal">
+            <div class="hero-visual-card">
+              <span class="hero-visual-badge">5 niezwykłych gatunków</span>
+
+              <h2 style="font-size: 1.35rem; margin-bottom: 8px; color: var(--primary-teal-deep);">
+                Spotkanie twarzą w twarz z egzotyką
+              </h2>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-bottom: 14px;">
+                Dzieci mają unikalną okazję zobaczyć żywe okazy z bliska, dotknąć bezpiecznych gatunków i poznać sekrety kamuflażu.
+              </p>
+
+              <!-- Lucide Ikony dla 5 stworzeń -->
+              <div class="hero-creatures-row">
+                <!-- Patyczaki: Lucide GitBranch / Stick -->
+                <div class="hero-creature-item" title="Patyczaki">
+                  <div class="hero-creature-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="6" x2="6" y1="3" y2="15"></line>
+                      <circle cx="18" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                  </div>
+                  <span class="hero-creature-name">Patyczaki</span>
+                </div>
+
+                <!-- Straszyki: Lucide Shield / Armor Bug -->
+                <div class="hero-creature-item" title="Straszyki">
+                  <div class="hero-creature-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m8 2 1.88 1.88"></path>
+                      <path d="M14.12 3.88 16 2"></path>
+                      <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"></path>
+                      <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"></path>
+                      <path d="M12 20v-9"></path>
+                      <path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path>
+                      <path d="M6 13H2"></path>
+                      <path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path>
+                      <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path>
+                      <path d="M22 13h-4"></path>
+                      <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path>
+                    </svg>
+                  </div>
+                  <span class="hero-creature-name">Straszyki</span>
+                </div>
+
+                <!-- Liśćce: Lucide Leaf -->
+                <div class="hero-creature-item" title="Liśćce">
+                  <div class="hero-creature-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                    </svg>
+                  </div>
+                  <span class="hero-creature-name">Liśćce</span>
+                </div>
+
+                <!-- Agama brodata: Lucide Footprints / Lizard Reptile -->
+                <div class="hero-creature-item" title="Agama brodata">
+                  <div class="hero-creature-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="4"></circle>
+                      <path d="M12 2v2"></path>
+                      <path d="M12 20v2"></path>
+                      <path d="m4.93 4.93 1.41 1.41"></path>
+                      <path d="m17.66 17.66 1.41 1.41"></path>
+                      <path d="M2 12h2"></path>
+                      <path d="M20 12h2"></path>
+                      <path d="m6.34 17.66-1.41 1.41"></path>
+                      <path d="m19.07 4.93-1.41 1.41"></path>
+                    </svg>
+                  </div>
+                  <span class="hero-creature-name">Agama</span>
+                </div>
+
+                <!-- Ślimak afrykański: Lucide Spiral / Disc -->
+                <div class="hero-creature-item" title="Ślimak afrykański">
+                  <div class="hero-creature-circle">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 8a4 4 0 1 0 4 4"></path>
+                      <circle cx="12" cy="12" r="1"></circle>
+                    </svg>
+                  </div>
+                  <span class="hero-creature-name">Ślimak</span>
+                </div>
+              </div>
+
+              <ul class="hero-features-list">
+                <li class="hero-feature-item">
+                  <!-- Lucide CheckCircle2 -->
+                  <svg class="hero-feature-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Bezpośredni dojazd do przedszkola lub szkoły na terenie Poddębic i okolic</span>
+                </li>
+                <li class="hero-feature-item">
+                  <svg class="hero-feature-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Bezpieczne, certyfikowane okazy przyzwyczajone do kontaktu z dziećmi</span>
+                </li>
+                <li class="hero-feature-item">
+                  <svg class="hero-feature-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
+                  <span>Przejrzysta opłata wynosząca dokładnie 25 zł za osobę</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROZDZIELACZ Z MOTYWEM LIŚCIA LUCIDE -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- SEKCJA POZNAJ NASZE ZWIERZĘTA -->
+    <section class="section-animals" id="zwierzeta" aria-labelledby="animalsTitle">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Mieszkańcy Zwierzogrodu</span>
+          <h2 id="animalsTitle" class="section-title">Poznaj nasze zwierzęta</h2>
+          <p class="section-intro">
+            Każdy z naszych małych podopiecznych reprezentuje fascynujące przystosowania ewolucyjne. Podczas warsztatów dzieci poznają wszystkie pięć gatunków z bliska.
+          </p>
+        </div>
+
+        <div class="animals-grid">
+          <!-- 1. PATYCZAKI (Lucide GitBranch / Twig camouflage) -->
+          <article class="animal-card reveal">
+            <div class="animal-icon-container" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" x2="6" y1="3" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+            </div>
+            <span class="animal-tag">Mistrzowie kamuflażu gałązkowego</span>
+            <h3 class="animal-name">Patyczaki</h3>
+            <p class="animal-desc">
+              Smukłe owady przypominające żywe gałązki drzew. Dzieci dowiadują się, jak patyczaki zastygają w bezruchu na roślinach, dlaczego kołyszą się na wietrze imitując gałąź i w jaki sposób chronią się przed drapieżnikami w naturze.
+            </p>
+            <div class="animal-highlight-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Zdumiewająca mimikra i łagodne usposobienie</span>
+            </div>
+          </article>
+
+          <!-- 2. STRASZYKI (Lucide Shield-Alert / Armored spiky bug) -->
+          <article class="animal-card reveal">
+            <div class="animal-icon-container" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m8 2 1.88 1.88"></path>
+                <path d="M14.12 3.88 16 2"></path>
+                <path d="M9 7.13v-1a3.003 3.003 0 1 1 6 0v1"></path>
+                <path d="M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6"></path>
+                <path d="M12 20v-9"></path>
+                <path d="M6.53 9C4.6 8.8 3 7.1 3 5"></path>
+                <path d="M6 13H2"></path>
+                <path d="M3 21c0-2.1 1.7-3.9 3.8-4"></path>
+                <path d="M20.97 5c0 2.1-1.6 3.8-3.5 4"></path>
+                <path d="M22 13h-4"></path>
+                <path d="M17.2 17c2.1.1 3.8 1.9 3.8 4"></path>
+              </svg>
+            </div>
+            <span class="animal-tag">Niezwykłe owady z kolcami</span>
+            <h3 class="animal-name">Straszyki</h3>
+            <p class="animal-desc">
+              Wyraźnie odmienne od patyczaków, posiadające masywniejsze ciało, wyrostki i kolce przypominające korę drzewną. Uczestnicy poznają ich fascynujące zachowania obronne, takie jak unoszenie odwłoka na wzór skorpiona oraz udawanie martwego.
+            </p>
+            <div class="animal-highlight-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Unikalna budowa pancerza i techniki obronne</span>
+            </div>
+          </article>
+
+          <!-- 3. LIŚĆCE (Lucide Leaf) -->
+          <article class="animal-card reveal">
+            <div class="animal-icon-container" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+              </svg>
+            </div>
+            <span class="animal-tag">Żywe zielone liście</span>
+            <h3 class="animal-name">Liśćce</h3>
+            <p class="animal-desc">
+              Prawdziwy cud natury — owady, których ciało i odnóża do złudzenia imitują zielony liść z widocznymi nerwami i brzegami. Dzieci z zachwytem odkrywają, jak trudno dostrzec liśćca wśród prawdziwych roślin w terrarium.
+            </p>
+            <div class="animal-highlight-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Perfekcyjne odwzorowanie struktury roślinnej</span>
+            </div>
+          </article>
+
+          <!-- 4. AGAMA BRODATA (Lucide Sun & Scales / Desert Reptile) -->
+          <article class="animal-card reveal">
+            <div class="animal-icon-container" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </div>
+            <span class="animal-tag">Przyjazny gad z Australii</span>
+            <h3 class="animal-name">Agama brodata</h3>
+            <p class="animal-desc">
+              Łagodna, ciekawska i przyzwyczajona do obecności ludzi jaszczurka pustynna. Dzieci mogą przyjrzeć się jej łuskom, charakterystycznej kolczastej brodzie, pazurkom oraz dowiedzieć się, jak gady regulują temperaturę ciała i co lubią chrupać.
+            </p>
+            <div class="animal-highlight-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Bezpośredni kontakt z oswojonym gadem</span>
+            </div>
+          </article>
+
+          <!-- 5. ŚLIMAK AFRYKAŃSKI (Lucide Spiral Shell) -->
+          <article class="animal-card reveal">
+            <div class="animal-icon-container" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8a4 4 0 1 0 4 4"></path>
+                <circle cx="12" cy="12" r="1"></circle>
+              </svg>
+            </div>
+            <span class="animal-tag">Olbrzymi mięczak lądowy</span>
+            <h3 class="animal-name">Ślimak afrykański</h3>
+            <p class="animal-desc">
+              Jeden z największych lądowych ślimaków świata, budzący ogromne zainteresowanie swoimi rozmiarami i potężną spiralną muszlą. Dzieci obserwują falujący ruch stopy, badanie otoczenia czułkami i dowiadują się o diecie tego niezwykłego roślinożercy.
+            </p>
+            <div class="animal-highlight-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Imponujące rozmiary i bezpieczna obserwacja z bliska</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROZDZIELACZ Z MOTYWEM LIŚCIA -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- SEKCJA JAK WYGLĄDA SPOTKANIE -->
+    <section class="section-program" id="przebieg" aria-labelledby="programTitle">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Przebieg warsztatów</span>
+          <h2 id="programTitle" class="section-title">Jak wygląda spotkanie</h2>
+          <p class="section-intro">
+            Nasze zajęcia łączą rzetelną wiedzę biologiczną z fascynującą przygodą, wzbudzając naturalną ciekawość świata u dzieci w każdym wieku.
+          </p>
+        </div>
+
+        <!-- GŁÓWNY OPIS PROGRAMU -->
+        <div class="program-core-card reveal">
+          <!-- Lucide BookOpen Icon -->
+          <div class="program-quote-icon-wrap" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="program-core-paragraph">
+              Podczas spotkania dzieci poznają fascynujący świat zwierząt egzotycznych — będą mogły zobaczyć je z bliska, dowiedzieć się ciekawostek i zadać pytania.
+            </p>
+            <p style="margin-top: 10px; font-size: 1rem; color: var(--text-muted);">
+              Zajęcia są prowadzone w bezpiecznej, przyjaznej atmosferze, z poszanowaniem wrażliwości każdego młodego uczestnika oraz z najwyższą dbałością o dobrostan prezentowanych zwierząt.
+            </p>
+          </div>
+        </div>
+
+        <!-- FILARY ZAJĘĆ (LUCIDE ICONS) -->
+        <div class="program-pillars-grid">
+          <div class="program-pillar-card reveal">
+            <!-- Lucide Eye -->
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Bliska obserwacja</h3>
+            <p class="pillar-text">
+              Dzieci nie oglądają zwierząt wyłącznie na ekranie lub z daleka. Każdy okaz prezentowany jest w zasięgu wzroku, co pozwala dostrzec najdrobniejsze szczegóły budowy, oczu, odnóży i pancerza.
+            </p>
+          </div>
+
+          <div class="program-pillar-card reveal">
+            <!-- Lucide Sparkles / Curiosity -->
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Niezwykłe ciekawostki</h3>
+            <p class="pillar-text">
+              Przekazujemy wiedzę w sposób lekki, obrazowy i intrygujący. Opowiadamy o naturalnym środowisku życia, sposobach zdobywania pokarmu i sekretach przetrwania w tropikach.
+            </p>
+          </div>
+
+          <div class="program-pillar-card reveal">
+            <!-- Lucide MessageCircleQuestion -->
+            <div class="pillar-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" x2="12.01" y1="17" y2="17"></line>
+              </svg>
+            </div>
+            <h3 class="pillar-title">Czas na pytania</h3>
+            <p class="pillar-text">
+              Zachęcamy dzieci do zadawania nawet najbardziej nietypowych pytań. Żadne pytanie nie pozostaje bez odpowiedzi, dzięki czemu warsztaty stają się żywym, interaktywnym dialogiem.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROZDZIELACZ Z MOTYWEM LIŚCIA -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- SEKCJA CENNIK -->
+    <section class="section-pricing" id="cennik" aria-labelledby="pricingTitle">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Przejrzyste zasady</span>
+          <h2 id="pricingTitle" class="section-title">Cennik warsztatów</h2>
+          <p class="section-intro">
+            Oferujemy prostą, jednolitą stawkę za udział w warsztatach edukacyjnych, bez żadnych ukrytych kosztów organizacyjnych.
+          </p>
+        </div>
+
+        <div class="pricing-card-wrapper reveal">
+          <div class="pricing-ribbon">Stała i uczciwa opłata</div>
+
+          <div class="pricing-main-block">
+            <p class="pricing-headline">Koszt uczestnictwa w warsztatach</p>
+            <div class="pricing-amount-row">
+              <span class="pricing-amount-number">25</span>
+              <span class="pricing-amount-currency">zł</span>
+              <span class="pricing-amount-period">/ za osobę</span>
+            </div>
+            <p class="pricing-callout-text">
+              Koszt zajęć wynosi dokładnie 25 zł za osobę (koszt zajęć 25 zł za osobę).
+            </p>
+          </div>
+
+          <div class="pricing-includes-grid">
+            <div class="pricing-include-item">
+              <!-- Lucide CheckCircle2 -->
+              <svg class="pricing-include-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Pełna prezentacja 5 gatunków: patyczaki, straszyki, liśćce, agama brodata i ślimak afrykański</span>
+            </div>
+
+            <div class="pricing-include-item">
+              <svg class="pricing-include-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Dojazd z Poddębic bezpośrednio do siedziby przedszkola lub szkoły</span>
+            </div>
+
+            <div class="pricing-include-item">
+              <svg class="pricing-include-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Doświadczone, cierpliwe i pełne empatii podejście do każdej grupy wiekowej</span>
+            </div>
+
+            <div class="pricing-include-item">
+              <svg class="pricing-include-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              <span>Możliwość zorganizowania zajęć dla kilku kolejnych grup w ciągu jednego dnia</span>
+            </div>
+          </div>
+
+          <div class="pricing-action-footer">
+            <a href="tel:693217524" class="btn btn-accent" aria-label="Zarezerwuj termin warsztatów pod numerem 693 217 524">
+              <!-- Lucide PhoneCall -->
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <span>Zarezerwuj termin: 693 217 524</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROZDZIELACZ Z MOTYWEM LIŚCIA -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-line"></div>
+      <div class="divider-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+          <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+        </svg>
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- SEKCJA ZAPROŚ NAS DO SWOJEJ PLACÓWKI -->
+    <section class="section-contact" id="kontakt" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Zaplanuj wyjątkową lekcję</span>
+          <h2 id="contactTitle" class="section-title">Zaproś nas do swojej placówki</h2>
+          <p class="section-intro">
+            Chętnie odpowiemy na wszystkie pytania dyrekcji, wychowawców oraz rad rodziców. Skontaktuj się z nami telefonicznie lub mailowo, aby ustalić dogodny termin wizyty.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- KARTA DANYCH KONTAKTOWYCH -->
+          <div class="contact-info-card reveal">
+            <div>
+              <h3 style="font-size: 1.45rem; color: var(--primary-teal-deep); margin-bottom: 8px;">
+                Bezpośredni kontakt
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--text-muted); margin-bottom: 22px;">
+                Jesteśmy do Państwa dyspozycji codziennie. Z przyjemnością dopasujemy harmonogram spotkań do planu dnia w Waszej placówce.
+              </p>
+
+              <!-- Telefon: Lucide Phone -->
+              <a href="tel:693217524" class="contact-item-link" aria-label="Zadzwoń pod numer 693 217 524">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Numer telefonu</span>
+                  <div class="contact-item-value">693 217 524</div>
+                </div>
+              </a>
+
+              <!-- E-mail: Lucide Mail -->
+              <a href="mailto:magdalenamonika67@gmail.com" class="contact-item-link" aria-label="Wyślij e-mail na magdalenamonika67@gmail.com">
+                <div class="contact-icon-bubble" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Adres poczty elektronicznej</span>
+                  <div class="contact-item-value">magdalenamonika67@gmail.com</div>
+                </div>
+              </a>
+
+              <!-- Lokalizacja: Lucide MapPin -->
+              <div class="contact-item-link" style="cursor: default;">
+                <div class="contact-icon-bubble" aria-hidden="true" style="background: var(--accent-amber-bright); color: #78350f;">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-item-label">Lokalizacja bazy</span>
+                  <div class="contact-item-value">Poddębice</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- KARTA INFORMACJI DLA NAUCZYCIELI -->
+          <div class="contact-faq-card reveal">
+            <h3 style="font-size: 1.35rem; color: var(--primary-teal-deep); margin-bottom: 4px;">
+              Informacje organizacyjne
+            </h3>
+
+            <div>
+              <div class="faq-block-title">
+                <!-- Lucide CheckCircle -->
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Jak przygotować salę na przyjazd Zwierzogrodu?</span>
+              </div>
+              <p class="faq-block-desc">
+                Nie wymagamy specjalistycznego wyposażenia. Wystarczy standardowa sala lekcyjna lub przedszkolna ze stabilnym stołem dla prowadzącego i miejscem dla siedzących dzieci.
+              </p>
+            </div>
+
+            <div>
+              <div class="faq-block-title">
+                <!-- Lucide ShieldCheck -->
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+                <span>Bezpieczeństwo i dobrostan zwierząt</span>
+              </div>
+              <p class="faq-block-desc">
+                Wszystkie zwierzęta są zdrowe, odchowane w warunkach domowych i pod stałą opieką. Zajęcia przebiegają w sposób w pełni kontrolowany i bezpieczny zarówno dla dzieci, jak i stworzeń.
+              </p>
+            </div>
+
+            <div>
+              <div class="faq-block-title">
+                <!-- Lucide Clock -->
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>Czas trwania i liczba grup</span>
+              </div>
+              <p class="faq-block-desc">
+                Pojedynczy moduł zajęć trwa z reguły od 45 do 60 minut. W ciągu jednej wizyty w placówce możemy zrealizować spotkania dla kilku kolejnych grup przedszkolnych lub klas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STOPKA STRONY -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Kolumna 1: Marka i misja -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+            <img src="https://i.ibb.co/RTDkhgw5/811830935-122113725333332839-2852031223488428120-n.jpg" alt="Logo Zwierzogród" width="38" height="38" loading="lazy" decoding="async" style="border-radius: 50%; border: 1.5px solid var(--accent-amber-bright);">
+            <span class="brand-font" style="font-size: 1.35rem; font-weight: 800; color: #ffffff;">Zwierzogród</span>
+          </div>
+          <p class="footer-brand-desc">
+            Mobilne warsztaty edukacyjne z żywymi zwierzętami egzotycznymi. Odkrywamy przed dziećmi fascynujący świat niezwykłych istot, budując przyrodniczą wiedzę, empatię i ciekawość natury.
+          </p>
+          <div style="display: inline-flex; align-items: center; gap: 8px; color: var(--accent-amber-bright); font-size: 0.9rem; font-weight: 700;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>Baza: Poddębice</span>
+          </div>
+        </div>
+
+        <!-- Kolumna 2: Szybkie linki -->
+        <div>
+          <h4 class="footer-heading brand-font">Nawigacja</h4>
+          <ul class="footer-links-list">
+            <li><a href="#zwierzeta">Nasze zwierzęta</a></li>
+            <li><a href="#przebieg">Przebieg warsztatów</a></li>
+            <li><a href="#cennik">Cennik (25 zł za osobę)</a></li>
+            <li><a href="#kontakt">Zaproś nas do placówki</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolumna 3: Kontakt bezpośredni -->
+        <div>
+          <h4 class="footer-heading brand-font">Kontakt z nami</h4>
+          <ul class="footer-links-list">
+            <li>
+              <a href="tel:693217524" aria-label="Zadzwoń pod numer 693 217 524">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>693 217 524</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:magdalenamonika67@gmail.com" aria-label="Wyślij e-mail do magdalenamonika67@gmail.com">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>magdalenamonika67@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 0.92rem; color: #cbd5e1;">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Poddębice, Polska</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Zwierzogród — Warsztaty dla Dzieci. Poddębice. Wszelkie prawa zastrzeżone.</p>
+        <p>Edukacja przyrodnicza w szkołach i przedszkolach.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- VANILLA JAVASCRIPT: PŁYNNE DZIAŁANIE, ZERO LAGÓW, OBSŁUGA MENU I KOTWIC -->
+  <script>
+    (function() {
+      'use strict';
+
+      // 1. Obsługa menu mobilnego
+      var mobileBtn = document.getElementById('mobileToggle');
+      var navMenu = document.getElementById('navMenu');
+
+      var hamburgerSvg = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>';
+      var closeSvg = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>';
+
+      function closeMobileMenu() {
+        if (navMenu && navMenu.classList.contains('mobile-open')) {
+          navMenu.classList.remove('mobile-open');
+          if (mobileBtn) {
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.innerHTML = hamburgerSvg;
+          }
+        }
+      }
+
+      if (mobileBtn && navMenu) {
+        mobileBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = navMenu.classList.toggle('mobile-open');
+          mobileBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          mobileBtn.innerHTML = isOpen ? closeSvg : hamburgerSvg;
+        });
+
+        // Zamknięcie po kliknięciu dowolnego linku w menu
+        navMenu.addEventListener('click', function(e) {
+          if (e.target.closest('a')) {
+            closeMobileMenu();
+          }
+        });
+
+        // Zamknięcie po kliknięciu poza menu
+        document.addEventListener('click', function(e) {
+          if (!navMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+            closeMobileMenu();
+          }
+        });
+
+        // Zamknięcie klawiszem Escape
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeMobileMenu();
+          }
+        });
+      }
+
+      // 2. Lekki IntersectionObserver (płynny na mobile)
+      if ('IntersectionObserver' in window) {
+        var revealObserver = new IntersectionObserver(function(entries, observer) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) {
+              entries[i].target.classList.add('revealed');
+              observer.unobserve(entries[i].target);
+            }
+          }
+        }, {
+          rootMargin: '0px 0px -30px 0px',
+          threshold: 0.05
+        });
+
+        var elements = document.querySelectorAll('.reveal');
+        for (var j = 0; j < elements.length; j++) {
+          revealObserver.observe(elements[j]);
+        }
+      } else {
+        var allReveals = document.querySelectorAll('.reveal');
+        for (var k = 0; k < allReveals.length; k++) {
+          allReveals[k].classList.add('revealed');
+        }
+      }
+
+      // 3. Płynne przewijanie do kotwic z uwzględnieniem offsetu paska nawigacji
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          var targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            var headerOffset = 84;
+            var elementPos = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({
+              top: elementPos,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Zwierzogród — Warsztaty dla Dzieci",
+  "description": "Mobilne warsztaty edukacyjne z żywymi zwierzętami egzotycznymi dla szkół i przedszkoli z Poddębic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
